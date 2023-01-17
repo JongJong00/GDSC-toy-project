@@ -33,7 +33,7 @@ return (
 
   <Wrap className="site-card-border-less-wrapper">
 
-    <Card bordered={false}>
+    <Card bordered={false} >
 
       <Header>
         <h1>동역학</h1>
@@ -122,7 +122,8 @@ return (
   
     const Wrap = styled.div`
         position: relative;
-        width: 75%;   
+        width: 75%; 
+        
 `;    
 
 const HashTag = styled.div`
