@@ -1,13 +1,16 @@
-import { Card, Col, Row, Button } from 'antd';
+import { Card, Col, Row } from 'antd';
+import { Button } from 'antd';
+import { useState } from 'react';
 import { CarryOutOutlined, CommentOutlined } from '@ant-design/icons';
 import { Badge, Divider, Space } from 'antd';
 import { Tag } from 'antd';
 import styled from 'styled-components';
 import "../App.css";
 
-const Detail = () => {
+  const Detail = () => {
     
-const colors = [
+    const colors = [
+
         'year 과목년도',
         'semester 학기',
         'grade 수강 학년',
@@ -25,22 +28,27 @@ const colors = [
         'sugang 수강 신청 한 인원',
         'sugangpack 수강 꾸러미 담은 인원',
 
-]
-return (
+    ]
 
+    const [isVisible, setIsVisible] = useState(true);
+    const closeBanner = () => setIsVisible(false);
 
-<>
+  return (
 
-  <Wrap className="site-card-border-less-wrapper">
+    
+<>  
+
+  <Wrap className="site-card-border-less-wrapper"
+  style={{ display: isVisible ? "flex" : "none" }}>
 
     <Card bordered={false}>
 
+      <BtnSpace>
+          <Button type="primary" onClick={closeBanner}>닫기</Button>
+      </BtnSpace>
       <Header>
         <h1>동역학</h1>
         <h5>CRTR23423</h5>
-        <Btnspace>
-        <Button type="primary">Back</Button>
-        </Btnspace>
       </Header>
       
       
@@ -143,9 +151,10 @@ return (
         display : flex; 
     `;
 
-    const Btnspace = styled.div`
-      float: right;
-    `;
+     const BtnSpace = styled.div`
+        margin-left : 900px;
+        position : absolute;
+     `;
 
     const Popularity = styled.div`
         margin-top : 30px; 
