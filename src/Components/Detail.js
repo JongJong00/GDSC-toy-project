@@ -1,6 +1,4 @@
 import { Card, Col, Row } from 'antd';
-import { Button } from 'antd';
-import { useState } from 'react';
 import { CarryOutOutlined, CommentOutlined } from '@ant-design/icons';
 import { Badge, Divider, Space } from 'antd';
 import { Tag } from 'antd';
@@ -30,22 +28,17 @@ import "../App.css";
 
     ]
 
-    const [isVisible, setIsVisible] = useState(true);
-    const closeBanner = () => setIsVisible(false);
-
+    
   return (
 
     
 <>  
 
   <Wrap className="site-card-border-less-wrapper"
-  style={{ display: isVisible ? "flex" : "none" }}>
+  >
 
     <Card bordered={false}>
 
-      <BtnSpace>
-          <Button type="primary" onClick={closeBanner}>닫기</Button>
-      </BtnSpace>
       <Header>
         <h1>동역학</h1>
         <h5>CRTR23423</h5>
@@ -141,7 +134,7 @@ import "../App.css";
         margin-left : 200px;
         margin-right : 200px;
         margin-top : 30px;
-        width : 75%
+        width : 100%
         display : flex;
         justify-content: center;
         align-items: center;
@@ -151,10 +144,7 @@ import "../App.css";
         display : flex; 
     `;
 
-     const BtnSpace = styled.div`
-        margin-left : 900px;
-        position : absolute;
-     `;
+  
 
     const Popularity = styled.div`
         margin-top : 30px; 
