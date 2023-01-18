@@ -1,4 +1,4 @@
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Button } from 'antd';
 import { CarryOutOutlined, CommentOutlined } from '@ant-design/icons';
 import { Badge, Divider, Space } from 'antd';
 import { Tag } from 'antd';
@@ -33,17 +33,21 @@ return (
 
   <Wrap className="site-card-border-less-wrapper">
 
-    <Card bordered={false} >
+    <Card bordered={false}>
 
       <Header>
         <h1>동역학</h1>
         <h5>CRTR23423</h5>
+        <Btnspace>
+        <Button type="primary">Back</Button>
+        </Btnspace>
       </Header>
-        <Btn>메인페이지로 돌아가기</Btn>
+      
       
 
   <Divider orientation="left"> <CarryOutOutlined /> 인기도</Divider>
 
+  <Popularity>
   <div className="site-card-wrapper">
     <Row gutter={16}>
 
@@ -67,6 +71,8 @@ return (
 
     </Row>
   </div>
+  </Popularity>
+  
 
   <Divider orientation="left" > <CarryOutOutlined />   기본정보</Divider>
         <HashTag>
@@ -85,12 +91,14 @@ return (
     
     <Divider orientation="left"> <CarryOutOutlined />   세부 수업 관련 정보</Divider>
     
-    <Space direction="vertical">
-      {colors.map((colors) => (
-        <Badge key={colors} color={colors} text={colors} />
-      ))}
-    </Space>
-
+    <Contents>
+      <Space direction="vertical">
+        {colors.map((colors) => (
+          <Badge key={colors} color={colors} text={colors} />
+        ))}
+      </Space>
+    </Contents>
+    
      <Divider orientation="left"><CommentOutlined />   리뷰</Divider>
     <Space direction="vertical">
       <div>review</div>
@@ -122,37 +130,37 @@ return (
   
     const Wrap = styled.div`
         position: relative;
-        width: 75%; 
-        
-`;    
+        margin-left : 200px;
+        margin-right : 200px;
+        margin-top : 30px;
+        width : 75%
+        display : flex;
+        justify-content: center;
+        align-items: center;
+    `;    
 
-const HashTag = styled.div`
-  align-items:left;     
-`;    
+    const Header = styled.div`
+        display : flex; 
+    `;
 
-  
+    const Btnspace = styled.div`
+      float: right;
+    `;
 
-const Header = styled.div`
-        display : flex 
-        
-`;    
+    const Popularity = styled.div`
+        margin-top : 30px; 
+        margin-bottom : 30px; 
+    `; 
 
-const Btn = styled.button`
-background:#1AAB8A;
-color:#fff;
-border:none;
-position:relative;
-height:50px;
-font-size:1.6em;
-padding:0 2em;
-cursor:pointer;
-transition:800ms ease all;
-outline:none;
-border-right-width: 2px;
-width: 75%
-`; 
-
-
+    const HashTag = styled.div`
+        margin-top : 25px; 
+        margin-bottom : 25px; 
+        margin-left : 100px;  
+    `;  
+    
+    const Contents = styled.div`
+        margin-top : 30px; 
+    `;
 
 
 export default Detail;
