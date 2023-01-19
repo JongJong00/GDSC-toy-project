@@ -33,7 +33,7 @@ import "../App.css";
 
     
 <>  
-
+  <YellowBack>
   <Wrap className="site-card-border-less-wrapper"
   >
 
@@ -122,19 +122,27 @@ import "../App.css";
         <Col span={12}>이론학점 : 3</Col>
         <Col span={12}>실습학점 : 3</Col>
         </Row> */}
+        <footer>
+          
+        </footer>
         
       </Card>
       </Wrap>
+      </YellowBack>
        
       </>
     )}
   
+    const YellowBack = styled.div`
+        background-color : #fcd469;
+    `;    
+
+
     const Wrap = styled.div`
         position: relative;
         margin-left : 200px;
         margin-right : 200px;
-        margin-top : 30px;
-        width : 100%
+        width : 75%
         display : flex;
         justify-content: center;
         align-items: center;
