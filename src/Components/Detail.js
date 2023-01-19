@@ -1,5 +1,5 @@
-import { Card, Col, Row } from 'antd';
-import { CarryOutOutlined, CommentOutlined } from '@ant-design/icons';
+import { Card, Col, Row, Button } from 'antd';
+import { CarryOutOutlined } from '@ant-design/icons';
 import { Badge, Divider, Space } from 'antd';
 import { Tag } from 'antd';
 import styled from 'styled-components';
@@ -67,7 +67,7 @@ import styled from 'styled-components';
       </Col>
 
       <Col span={8}>
-        <Card title="favor" bordered={false}>
+        <Card title="1-favor" bordered={false}>
           30%
         </Card>
       </Col>
@@ -102,10 +102,6 @@ import styled from 'styled-components';
       </Space>
     </Contents>
     
-     <Divider orientation="left"><CommentOutlined />   리뷰</Divider>
-    <Space direction="vertical">
-      <div>review</div>
-    </Space>
         {/* <Row style={{padding : 60}}>
         <Col span={12}></Col>
         <Col span={12}>배종현</Col>
@@ -124,12 +120,15 @@ import styled from 'styled-components';
         <Col span={12}>이론학점 : 3</Col>
         <Col span={12}>실습학점 : 3</Col>
         </Row> */}
-        <footer>
+
+          <footer>
+          <Divider orientation="left"> </Divider>
+              <Button type="primary">이전글</Button>
+              <Button type="primary">다음글</Button>
+          </footer>
           
-        </footer>
-        
-      </Card>
-      </Wrap>
+          </Card>
+        </Wrap>
       </YellowBack>
        
       </>
@@ -164,7 +163,8 @@ import styled from 'styled-components';
     const HashTag = styled.div`
         margin-top : 25px; 
         margin-bottom : 25px; 
-        margin-left : 100px;  
+        margin-left : 100px; 
+        font-weight : bold; 
     `;  
     
     const Contents = styled.div`
