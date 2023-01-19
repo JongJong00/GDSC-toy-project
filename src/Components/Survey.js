@@ -30,6 +30,7 @@ const Survey = () => {
 
 const LightYellowBack = styled.div`
         background-color : #fcd469;
+        height : 760px;
     `; 
 
 const Wrapping = styled.div`
@@ -37,6 +38,7 @@ const Wrapping = styled.div`
         margin-left : 200px;
         margin-right : 200px;
         width : 75%
+        
         display : flex;
         justify-content: center;
         align-items: center;
