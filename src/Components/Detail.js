@@ -1,5 +1,5 @@
-import { Card, Col, Row, Button } from 'antd';
-import { CarryOutOutlined } from '@ant-design/icons';
+import { Card, Col, Row } from 'antd';
+import { CarryOutOutlined, CommentOutlined } from '@ant-design/icons';
 import { Badge, Divider, Space } from 'antd';
 import { Tag } from 'antd';
 import styled from 'styled-components';
@@ -67,7 +67,7 @@ import styled from 'styled-components';
       </Col>
 
       <Col span={8}>
-        <Card title="1-favor" bordered={false}>
+        <Card title="favor" bordered={false}>
           30%
         </Card>
       </Col>
@@ -122,9 +122,32 @@ import styled from 'styled-components';
         </Row> */}
 
           <footer>
-          <Divider orientation="left"> </Divider>
-              <Button type="primary">이전글</Button>
-              <Button type="primary">다음글</Button>
+          <Divider orientation="left"><CommentOutlined />   리뷰 </Divider>
+          <Popularity>
+          <div className="site-card-wrapper">
+            <Row gutter={16}>
+
+              <Col span={8}>
+                <Card title="review_number(수강평가한 인원)" bordered={false}>
+                  36
+                </Card>
+              </Col>
+
+              <Col span={8}>
+                <Card title="review_mean(평가 평균)" bordered={false}>
+                  4.71
+                </Card>
+              </Col>
+
+              <Col span={8}>
+                <Card title="standard_deviation(표준편차)" bordered={false}>
+                  0.27
+                </Card>
+              </Col>
+
+            </Row>
+          </div>
+          </Popularity>
           </footer>
           
           </Card>
@@ -164,7 +187,6 @@ import styled from 'styled-components';
         margin-top : 25px; 
         margin-bottom : 25px; 
         margin-left : 100px; 
-        font-weight : bold; 
     `;  
     
     const Contents = styled.div`
