@@ -3,7 +3,6 @@ import { CarryOutOutlined, CommentOutlined } from '@ant-design/icons';
 import { Badge, Divider, Space } from 'antd';
 import { Tag } from 'antd';
 import styled from 'styled-components';
-import "../App.css";
 
   const Detail = () => {
     
@@ -28,7 +27,7 @@ import "../App.css";
 
     ]
 
-    
+
   return (
 
     
@@ -42,7 +41,10 @@ import "../App.css";
       <Header>
         <h1>동역학</h1>
         <h5>CRTR23423</h5>
+        
       </Header>
+
+      
       
       
 
