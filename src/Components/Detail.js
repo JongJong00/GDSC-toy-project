@@ -8,7 +8,7 @@ const Detail = () => {
     const colors = [
         '과목년도', //year
         '학기', //semester
-        '수강학년', // grade 
+        '학년', // grade 
         '학과(학부) ', //major
         '학점', //credit
         '이론인정학점', // lecture_credit
