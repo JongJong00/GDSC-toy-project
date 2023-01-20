@@ -8,23 +8,23 @@ const Detail = () => {
     const colors = [
         '과목년도', //year
         '학기', //semester
-        '수강 학년', // grade 
+        '수강학년', // grade 
         '학과(학부) ', //major
         '학점', //credit
-        '이론 인정 학점', // lecture_credit
-        '실습 인정 학점',// prac_credit
-        '학교 시간표 기준 수업시간', // school_time
-        '실제 수업 시간', // real_time
-        '강의 건물', // building
+        '이론인정학점', // lecture_credit
+        '실습인정학점',// prac_credit
+        '수업시간', // school_time
+        '실제수업시간', // real_time
+        '강의건물', // building
         '강의실', // room
         '총원', // total
-        '수강 신청 한 인원', // sugang
-        '수강 꾸러미 담은 인원', // sugangpack
+        '수강신청인원', // sugang
+        '수강꾸러미 담은인원', // sugangpack
         '강의평가 아이디', // review_id(pk)
         '과목코드 ', // lecture_id ex) 20221DOAS0305002
         '수강인원', // sugang_number
-        '학과 평균', // univ_mean(학과마다 다름)
-        '표준편차로 계산한 강의 평점' // favor %(정규화)
+        '학과평균', // univ_mean(학과마다 다름)
+        '표준편차로 계산한 강의평점' // favor %(정규화)
 
     ];
 
@@ -34,8 +34,8 @@ const Detail = () => {
                 <Wrap className="site-card-border-less-wrapper">
                     <Card bordered={false}>
                         <Header>
-                            <h1>동역학</h1>
-                            <h5>CRTR23423</h5>
+                            <h1>과목명</h1> 
+                            <h5>과목코드</h5>
                         </Header>
 
                       <DividerWrap>
@@ -50,7 +50,7 @@ const Detail = () => {
                                 <Row gutter={16}>
                                     <Col span={8}>
                                         <Card
-                                            title="수강꾸러미 신청인원 / 수강신청인원" //Sugangpack/sugang
+                                            title="수강꾸러미 담은인원 / 수강신청인원" //Sugangpack/sugang
                                             bordered={false}
                                         >
                                             150%
@@ -59,7 +59,7 @@ const Detail = () => {
 
                                     <Col span={8}>
                                         <Card
-                                            title="수강꾸러미 신청인원 / 정원" //Sugangpack/total
+                                            title="수강꾸러미 담은인원 / 총원" //Sugangpack/total
                                             bordered={false}
                                         >
                                             190%
@@ -83,7 +83,7 @@ const Detail = () => {
                         <HashTag>
                             <Tag color="magenta">교수님</Tag>
                             <Tag color="red">학부(대학)</Tag>
-                            <Tag color="volcano">전공/교양/융합</Tag> 
+                            <Tag color="volcano">교과구분</Tag> 
                             <Tag color="orange">수업방식</Tag>   
                         {/* (위에꺼부터)professor college type information */}
                             
