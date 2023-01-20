@@ -101,6 +101,7 @@ const Detail = () => {
                                         key={colors}
                                         color={colors}
                                         text={colors}
+                                        status="processing"
                                       
                                     />
                                 ))}
