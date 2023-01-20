@@ -9,12 +9,10 @@ const Detail = () => {
         'year 과목년도',
         'semester 학기',
         'grade 수강 학년',
-        'college 수업 소속 대학 ',
         'major 학과(학부) ',
         'credit 학점',
         'lecture_credit 이론 인정 학점',
         'prac_credit 실습 인정 학점',
-        'professor 교수님 성함 ',
         'school_time 학교 시간표 기준 수업시간',
         'real_time 실제 수업 시간',
         'building 강의 건물',
@@ -22,6 +20,12 @@ const Detail = () => {
         'total 총원',
         'sugang 수강 신청 한 인원',
         'sugangpack 수강 꾸러미 담은 인원',
+        'review_id 강의평가 아이디(pk)',
+        'lecture_id 과목코드 ex) 20221DOAS0305002',
+        'sugang_number 수강인원',
+        'univ_mean 학과 평균(학과마다 다름)',
+        'favor 표준편차로 계산한 강의 평점 %(정규화)'
+
     ];
 
     return (
@@ -63,7 +67,7 @@ const Detail = () => {
                                     </Col>
 
                                     <Col span={8}>
-                                        <Card title="favor" bordered={false}>
+                                        <Card title="1-favor" bordered={false}>
                                             30%
                                         </Card>
                                     </Col>
@@ -81,12 +85,12 @@ const Detail = () => {
                             <Tag color="volcano">type</Tag>
                             <Tag color="orange">information</Tag>
                             {/* <Tag color="gold">gold</Tag>
-      <Tag color="lime">lime</Tag>
-      <Tag color="green">green</Tag>
-      <Tag color="cyan">cyan</Tag>
-      <Tag color="blue">blue</Tag>
-      <Tag color="geekblue">geekblue</Tag>
-      <Tag color="purple">purple</Tag> */}
+                                <Tag color="lime">lime</Tag>
+                                <Tag color="green">green</Tag>
+                                <Tag color="cyan">cyan</Tag>
+                                <Tag color="blue">blue</Tag>
+                                <Tag color="geekblue">geekblue</Tag>
+                                <Tag color="purple">purple</Tag> */}
                         </HashTag>
 
                         <Divider orientation="left">
@@ -193,8 +197,7 @@ const Contents = styled.div`
     margin-top: 30px;
     font-weight : 500;
     margin-bottom: 30px;
-    font: 1.5rem;
-    line-height : 2.7em;
+    line-height : 2.8em;
 `;
 
 const DividerWrap = styled.div `
