@@ -81,7 +81,7 @@ const Detail = () => {
                             <CarryOutOutlined /> 기본정보
                         </Divider>
                         <HashTag>
-                            <Tag color="magenta">교수명</Tag>
+                            <Tag color="magenta">교수님</Tag>
                             <Tag color="red">학부(대학)</Tag>
                             <Tag color="volcano">전공/교양/융합</Tag> 
                             <Tag color="orange">수업방식</Tag>   
